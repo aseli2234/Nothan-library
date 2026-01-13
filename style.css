@@ -198,7 +198,7 @@ body {
 
 /* Tombol kembali */
 .back-button-container {
-  padding: 40px;
+  padding: 60px;
   text-align: left;
 }
 
@@ -233,4 +233,5 @@ body {
     margin-top: 10px;
   }
 }
+
 
