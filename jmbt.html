@@ -8,17 +8,22 @@
   <script src="main.js"></script>
   <link rel="icon" href="assets/icontitle.jpeg" type="image/x-icon">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- Header -->
   <header class="top-header">
     <div class="search-container">
       <input type="text" id="searchInput" placeholder="🔍 Cari file..." oninput="filterFiles()">
     </div>
   </header>
-</head>
-<body>
-</div>
-<div class="back-button-container">
-  <a href="index.html" class="back-button">⬅️ Kembali ke Beranda</a>
-</div>
+
+  <!-- Tombol kembali -->
+  <div class="back-button-container">
+    <a href="index.html" class="back-button">⬅️ Kembali ke Beranda</a>
+  </div>
+
+  <!-- Konten utama -->
   <main class="main-area" id="mainArea">
     <header class="hero">
       <div class="hero-text">
@@ -34,157 +39,65 @@
       </div>
     </header>
 
-    <section id="File List">
-        <h2>📂 Kumpulan Mod ETS2</h2>
-        <div class="file-grid">
-          <div class="file-card">
-            <h3>Truk FAW JH6</h3>
-            <p>By: Indo project</p>
-            <p>Support v1.40+</p>
-            <a href="https://sharemods.com/p3ejxsg60mlw/jh6_new.zip.html" target="_blank">Unduh</a>
-            <div class="password-box">
-              <span id="pw3">jh6</span>
-              <button onclick="copyPassword('pw3')">Salin Password</button>
-            </div>
-          </div>
-      
-          <div class="file-card">
-            <h3>Bus JB5 </h3>
-            <p>By: Teguh Giyono</p>
-            <p>Support v1.40+</p>
-            <a href="https://example.com/data.xlsx" target="_blank">Unduh</a>
-          </div>
-      
-          <div class="file-card">
-            <h3>Bus Legacy SR1</h3>
-            <p>By: IDK</p>
-            <p>Support v1.40+</p>
-            <a href="https://example.com/logo.png" target="_blank">Unduh</a>
-          </div>
-      
-          <div class="file-card">
-            <h3>Truck Mod Pack</h3>
-            <p>By: IDK</p>
-            <p>File PowerPoint untuk pelatihan internal.</p>
-            <a href="https://example.com/workshop.pptx" target="_blank">Unduh</a>
-            <div class="password-box">
-              <span id="pw5">workshop2025</span>
-              <button onclick="copyPassword('pw5')">Salin Password</button>
-            </div>
+    <!-- Section Mod ETS2 -->
+    <section id="FileList">
+      <h2>📂 Kumpulan Mod ETS2</h2>
+      <div class="file-grid">
+        <!-- contoh card -->
+        <div class="file-card">
+          <h3>Truk FAW JH6</h3>
+          <p>By: Indo project</p>
+          <p>Support v1.40+</p>
+          <a href="https://sharemods.com/p3ejxsg60mlw/jh6_new.zip.html" target="_blank">Unduh</a>
+          <div class="password-box">
+            <span id="pw3">jh6</span>
+            <button onclick="copyPassword('pw3')">Salin Password</button>
           </div>
         </div>
-      </section>
+        <!-- tambahkan card lain sesuai kebutuhan -->
+         <div class="file-card">
+          <h3>dor ngapain</h3>
+          <p>Belom ada</p>
+          <p>hehe</p>
+          <a href="" target="_blank">Unduh</a>
+          <div class="password-box">
+            <span id="pw3">jh6</span>
+            <button onclick="copyPassword('pw3')">Salin Password</button>
+      </div>
+    </section>
 
-      <!-- pembatas mod dan addon-->
+    <!-- Section Addon ETS2 -->
+    <section class="file-section">
+      <h2>📂 Kumpulan Addon ETS2</h2>
+      <div class="file-grid">
+        <!-- isi card addon -->
+      </div>
+    </section>
 
-      <section class="file-section">
-        <h2>📂 Kumpulan Addon ETS2 </h2>
-        <div class="file-grid">
-          <div class="file-card">
-            <h3>Basuri Final Astan</h3>
-            <p>By: Astan Gaming</p>
-            <p>Support v1.38 - v1.50</p>
-            <a href="https://www.mediafire.com/file/ajcv3agd9i37h1y/Basuri_Astan_Final_Free.rar/file" target="_blank">Unduh</a>
-            <div class="password-box">
-              <span id="pw3">ASTAN SEHAT SELALU PANJANG UMUR</span>
-              <button onclick="copyPassword('pw3')">Salin Password</button>
-            </div>
-          </div>
-      
-          <div class="file-card">
-            <h3>📊 Data Statistik</h3>
-            <p>Grup: Laporan</p>
-            <p>Template Excel untuk analisis bulanan.</p>
-            <a href="https://example.com/data.xlsx" target="_blank">Unduh</a>
-            <div class="password-box">
-              <span id="pw4">excel2025</span>
-              <button onclick="copyPassword('pw4')">Salin Password</button>
-            </div>
-          </div>
-      
-          <div class="file-card">
-            <h3>🎨 Logo PNG</h3>
-            <p>Grup: Desain</p>
-            <p>Logo resmi untuk branding visual.</p>
-            <a href="https://example.com/logo.png" target="_blank">Unduh</a>
-          </div>
-      
-          <div class="file-card">
-            <h3>📁 Presentasi Workshop</h3>
-            <p>Grup: Materi</p>
-            <p>File PowerPoint untuk pelatihan internal.</p>
-            <a href="https://example.com/workshop.pptx" target="_blank">Unduh</a>
-            <div class="password-box">
-              <span id="pw5">workshop2025</span>
-              <button onclick="copyPassword('pw5')">Salin Password</button>
-            </div>
-          </div>
-        </div>
-      </section>
+    <!-- Section Mod Bussid -->
+    <section class="file-section">
+      <h2>📂 Kumpulan Mod Bussid</h2>
+      <div class="file-grid">
+        <!-- isi card bussid -->
+      </div>
+    </section>
 
-      <!-- pembatas ets dan bussid-->
-
-      <section class="file-section">
-        <h2>📂 Kumpulan Mod Bussid</h2>
-        <div class="file-grid">
-          <div class="file-card">
-            <h3>Basuri Final Astan</h3>
-            <p>By: Astan Gaming</p>
-            <p>Support v1.38 - v1.50</p>
-            <a href="https://www.mediafire.com/file/ajcv3agd9i37h1y/Basuri_Astan_Final_Free.rar/file" target="_blank">Unduh</a>
-            <div class="password-box">
-              <span id="pw3">ASTAN SEHAT SELALU PANJANG UMUR</span>
-              <button onclick="copyPassword('pw3')">Salin Password</button>
-            </div>
-          </div>
-      
-          <div class="file-card">
-            <h3>📊 Data Statistik</h3>
-            <p>Grup: Laporan</p>
-            <p>Template Excel untuk analisis bulanan.</p>
-            <a href="https://example.com/data.xlsx" target="_blank">Unduh</a>
-            <div class="password-box">
-              <span id="pw4">excel2025</span>
-              <button onclick="copyPassword('pw4')">Salin Password</button>
-            </div>
-          </div>
-      
-          <div class="file-card">
-            <h3>🎨 Logo PNG</h3>
-            <p>Grup: Desain</p>
-            <p>Logo resmi untuk branding visual.</p>
-            <a href="https://example.com/logo.png" target="_blank">Unduh</a>
-          </div>
-      
-          <div class="file-card">
-            <h3>📁 Presentasi Workshop</h3>
-            <p>Grup: Materi</p>
-            <p>File PowerPoint untuk pelatihan internal.</p>
-            <a href="https://example.com/workshop.pptx" target="_blank">Unduh</a>
-            <div class="password-box">
-              <span id="pw5">workshop2025</span>
-              <button onclick="copyPassword('pw5')">Salin Password</button>
-            </div>
-          </div>
-        </div>
-      </section>
-      <footer class="footer">
-        <div class="footer-left">
-          <p>&copy; 2025 NotHan Dev</p>
-        </div>
-        <div class="footer-right">
-          <a href="https://wa.me/6288973757389" target="_blank" title="WhatsApp">
-            <img src="assets/wangsaf.png" alt="WhatsApp">
-          </a>
-          <a href="https://t.me/Hartoffc" target="_blank" title="Telegram">
-            <img src="assets/tele.png" alt="Telegram">
-          </a>
-        </div>
-      </footer>
-
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-left">
+        <p>&copy; 2025 NotHan Dev</p>
+      </div>
+      <div class="footer-right">
+        <a href="https://wa.me/6281210061590" target="_blank" title="WhatsApp">
+          <img src="assets/wangsaf.png" alt="WhatsApp">
+        </a>
+        <a href="https://t.me/Hartoffc" target="_blank" title="Telegram">
+          <img src="assets/tele.png" alt="Telegram">
+        </a>
+      </div>
+    </footer>
   </main>
 
   <div id="notif" class="notif">Password berhasil disalin!</div>
 </body>
 </html>
-
