@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <title>Laporkan Bug</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #0d0d0d;
+      color: #e0e0e0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 40px;
+    }
+
+    textarea {
+      width: 100%;
+      max-width: 400px;
+      height: 120px;
+      padding: 12px;
+      border-radius: 8px;
+      border: 1px solid #6a0dad;
+      background-color: #121212;
+      color: #e0e0e0;
+      margin-bottom: 20px;
+      resize: none;
+    }
+
+    button {
+      padding: 10px 20px;
+      background-color: #6a0dad;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-weight: bold;
+      cursor: pointer;
+      margin-bottom: 15px;
+    }
+
+    button:hover {
+      background-color: #8a2be2;
+    }
+
+    #status {
+      margin-top: 10px;
+      font-size: 0.9rem;
+      color: #b388ff;
+    }
+
+    .back-button {
+      text-decoration: none;
+      color: #e0e0e0;
+      font-weight: bold;
+      border: 1px solid #6a0dad;
+      padding: 10px 16px;
+      border-radius: 8px;
+      background-color: #262626;
+      transition: background-color 0.3s ease;
+    }
+
+    .back-button:hover {
+      background-color: #8a2be2;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <h2>🛠️ Laporkan Bug</h2>
+  <textarea id="reportText" placeholder="Tulis bug atau masalah di sini..."></textarea>
+  <button onclick="sendToTelegram()">Kirim</button>
+  <div id="status"></div>
+
+  <!-- Tombol Kembali -->
+  <a href="index.html" class="back-button">⬅️ Kembali ke Home</a>
+
+  <script>
+    async function sendToTelegram() {
+      const message = document.getElementById("reportText").value;
+      const status = document.getElementById("status");
+
+      if (!message.trim()) {
+        status.textContent = "❗ Isi laporan dulu.";
+        return;
+      }
+
+      const token = "7615726748:AAEa2CjsdPNOqt5KC5-dGp_jABDlrMMa6bQ";
+      const chatId = "8166992726";
+      const text = `🛠️ Bug Report:\n${message}`;
+
+      try {
+        const response = await fetch(`https://api.telegram.org/bot${token}/sendMessage`, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ chat_id: chatId, text })
+        });
+
+        if (response.ok) {
+          status.textContent = "✅ Laporan berhasil dikirim!";
+          document.getElementById("reportText").value = "";
+        } else {
+          status.textContent = "❌ Gagal mengirim laporan.";
+        }
+      } catch (err) {
+        status.textContent = "❌ Terjadi kesalahan saat mengirim.";
+      }
+    }
+  </script>
+</body>
+</html>
